@@ -1,0 +1,63 @@
+/* MAIN CONTAINER */
+.landing-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* LEAFLET MAP */
+.map {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  pointer-events: none; /* 🔥 ALLOWS MAP ZOOM & DRAG */
+}
+
+/* ENABLE CLICKS ONLY FOR BUTTON/LINK */
+.overlay button,
+.overlay a {
+  pointer-events: auto;
+}
+
+/* TEXT */
+.overlay h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 18px;
+  color: #e5e7eb;
+  margin-bottom: 25px;
+  max-width: 600px;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+  padding: 14px 40px;
+  font-size: 18px;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+}
+
+.login-btn:hover {
+  background: #1e40af;
+}

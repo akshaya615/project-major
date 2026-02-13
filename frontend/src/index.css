@@ -1,0 +1,40 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FULL HEIGHT FIX (REQUIRED FOR LEAFLET) */
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* BODY */
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #000;
+  overflow: hidden; /* prevent scrollbars */
+}
+
+/* LINKS */
+a {
+  font-weight: 500;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1e40af;
+}
+
+/* BUTTON RESET */
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}

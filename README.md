@@ -67,7 +67,8 @@ project-major/
 │   │     └── schemas.py
 │   │
 │   ├── 📂 services/
-│   │     (existing service files)
+│   │     ├──traffic_service.py
+|   |     └──weather_servicce.py
 │   │
 │   ├── 📂 utils/
 │   │     └── distance.py
@@ -315,6 +316,3 @@ It provides a scalable and intelligent safety monitoring system that can assist 
 This project is developed for academic and educational purposes.
 
 **All Rights Reserved © 2026*
-
-If you want, I can now make it look even more “final-year topper level” professional 😄
-

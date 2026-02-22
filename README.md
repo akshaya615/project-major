@@ -315,4 +315,4 @@ It provides a scalable and intelligent safety monitoring system that can assist 
 
 This project is developed for academic and educational purposes.
 
-**All Rights Reserved © 2026*
+**All Rights Reserved © 2026**

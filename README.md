@@ -295,7 +295,6 @@ Frontend runs at:
 
 ## 📈 Future Enhancements
 
-* Real-time traffic data integration
 * Mobile application version
 * Cloud deployment (AWS/Azure)
 * Advanced deep learning ensemble models

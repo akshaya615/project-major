@@ -1,113 +1,57 @@
-A Real-Time Accident Severity Prediction and Hotspot Detection Framework Using HDBSCAN with Context-Aware Voice Alerts
-A real-time machine learning–based road safety system for predicting accident severity and identifying accident-prone locations with proactive voice alerts.
-________________________________________
-Table of Contents
-•	About
-•	Features
-•	Technologies Used
-•	System Overview
-•	Installation
-•	Usage
-•	Screenshots
-•	Project Structure
-•	Contributing
-•	License
-________________________________________
-About
-This project implements a real-time intelligent road safety framework that predicts accident severity and detects high-risk road segments using machine learning and spatial clustering techniques. It combines supervised severity classification with HDBSCAN-based hotspot detection to provide route-aware risk assessment.
-The system integrates a FastAPI backend, a React (Vite) frontend, and context-aware voice alerts to deliver proactive safety warnings. Unlike traditional post-incident analysis systems, this framework focuses on real-time inference and preventive decision support for intelligent transportation applications.
-________________________________________
-Features
-•	Real-time accident severity prediction (Low, Medium, High)
-•	Hotspot detection using HDBSCAN clustering
-•	Route-aware risk visualization
-•	Interactive map-based interface
-•	Context-aware voice alerts
-•	User and administrator dashboards
-•	RESTful API-based backend
-________________________________________
-Technologies Used
-Backend
-•	Python 3.9+
-•	FastAPI
-•	Uvicorn
-•	Pydantic
-Machine Learning
-•	XGBoost
-•	Scikit-learn
-•	HDBSCAN
-•	Pandas
-•	NumPy
-Frontend
-•	React (Vite)
-•	JavaScript (ES6+)
-•	Leaflet.js
-•	Fetch API
-•	Web Speech API
-•	CSS
-________________________________________
-System Overview
-The system follows a modular architecture consisting of a frontend presentation layer, a backend processing layer, and a machine learning analytics layer. User route inputs are processed by the backend, where severity prediction and hotspot clustering are performed. The processed results are returned to the frontend for visualization and alert generation.
-________________________________________
-Installation
-Step 1: Clone the Repository
-git clone <repository-url>
-cd project-major
-________________________________________
-Step 2: Backend Setup
-cd api
-pip install -r requirements.txt
-________________________________________
-Step 3: Frontend Setup
-cd frontend
-npm install
-________________________________________
-Running the Project (Single Command)
-This project uses concurrently to run both backend and frontend together.
-npm init -y
-npm install concurrently --save-dev
-Update the root package.json:
-{
-  "name": "project-major",
-  "version": "1.0.0",
-  "scripts": {
-    "backend": "cd api && uvicorn main:app --reload",
-    "frontend": "cd frontend && npm run dev",
-    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
-  }
-}
-Run the application:
-npm run dev
-Backend runs at:
-http://localhost:8000
-Frontend runs at:
-http://localhost:5173
-________________________________________
-Usage
-1.	Open the frontend application in a browser.
-2.	Select source and destination locations.
-3.	Allow location access when prompted.
-4.	View the route with severity indicators and hotspot markers.
-5.	Receive voice alerts when approaching high-risk regions.
-6.	Administrators can access dashboards for monitoring severity trends and hotspots.
-________________________________________
-Screenshots
-Screenshots are recommended for projects with a visual interface.
-Suggested images:
-•	User dashboard with route and hotspots
-•	Admin dashboard analytics
-•	Voice alert interface
-Suggested directory structure:
-assets/
-├── architecture.png
-├── user_dashboard.png
-├── admin_dashboard.png
-└── alert.png
-________________________________________
-Project Structure
+🚦 A Real-Time Accident Severity Prediction and Hotspot Detection Framework Using HDBSCAN with Context-Aware Voice Alerts
+
+📌 Project Description
+
+This project presents a complete Real-Time Road Accident Severity Prediction and Hotspot Detection System designed to enhance transportation safety using Machine Learning and Spatial Data Analysis.
+
+The system predicts accident severity levels, detects accident-prone hotspots using HDBSCAN clustering, and provides real-time route-based risk visualization with intelligent voice alerts.
+
+It is a full-stack implementation built with:
+
+FastAPI (Backend API)
+
+React + Vite (Frontend UI)
+
+XGBoost & GNN Models (Severity Prediction)
+
+HDBSCAN (Hotspot Detection)
+
+Leaflet.js (Map Visualization)
+
+
+This framework is developed as an academic major project focusing on real-time predictive safety systems.
+
+
+---
+
+🎯 Objectives
+
+The primary objectives of this project are:
+
+1. Predict accident severity in real time.
+
+
+2. Detect accident-prone locations using density-based clustering.
+
+
+3. Provide route-level risk evaluation.
+
+
+4. Trigger contextual voice alerts for high-risk areas.
+
+
+5. Build a scalable ML-powered web application.
+
+
+
+
+---
+
+🏗️ Complete Project Structure
+
 project-major/
 │
-├── api/   (Complete Backend – No Changes)
+├── api/
 │   │
 │   ├── main.py
 │   ├── requirements.txt
@@ -118,72 +62,70 @@ project-major/
 │   ├── Day.docx
 │   │
 │   ├── routes/
-│   │     predict.py
-│   │     alerts.py
-│   │     hotspots.py
-│   │     auth.py
+│   │     ├── predict.py
+│   │     ├── alerts.py
+│   │     ├── hotspots.py
+│   │     └── auth.py
 │   │
 │   ├── core/
-│   │     database.py
-│   │     dependencies.py
-│   │     security.py
-│   │     secretkey.py
+│   │     ├── database.py
+│   │     ├── dependencies.py
+│   │     ├── security.py
+│   │     └── secretkey.py
 │   │
 │   ├── jobs/
-│   │     scheduler.py
-│   │     hotspot_job.py
+│   │     ├── scheduler.py
+│   │     └── hotspot_job.py
 │   │
 │   ├── schemas/
-│   │     schemas.py
+│   │     └── schemas.py
 │   │
 │   ├── services/
-│   │     (existing files)
+│   │     (existing service files)
 │   │
 │   ├── utils/
-│   │     distance.py
+│   │     └── distance.py
 │   │
 │   ├── ml/
-│   │     gnn_model.py
-│   │     gnnn_model.py
-│   │     xgboost_model.py
-│   │     hybrid_predictor.py
-│   │     gnn_model.pt
-│   │     gnn_severity_encoder.pt
-│   │     xgb_model.pkl
-│   │     severity_label_encoder.pkl
+│   │     ├── gnn_model.py
+│   │     ├── gnnn_model.py
+│   │     ├── xgboost_model.py
+│   │     ├── hybrid_predictor.py
+│   │     ├── gnn_model.pt
+│   │     ├── gnn_severity_encoder.pt
+│   │     ├── xgb_model.pkl
+│   │     └── severity_label_encoder.pkl
 │   │
 │   ├── preprocessing/
-│   │     clean_dataset.py
-│   │     feature_engineering.py
-│   │     build_graph.py
-│   │     add_coordinates.py
-│   │     load_dataset.py
-│   │     load_accident_data.py
-│   │     reload_accident_data.py
+│   │     ├── clean_dataset.py
+│   │     ├── feature_engineering.py
+│   │     ├── build_graph.py
+│   │     ├── add_coordinates.py
+│   │     ├── load_dataset.py
+│   │     ├── load_accident_data.py
+│   │     └── reload_accident_data.py
 │   │
 │   ├── analytics/
-│   │     hdbscan_hotspots.py
-│   │     kde_heatmap.py
-│   │     mongo_test.py
-│   │     check_mongo_fields.py
-│   │     check_nodes_columns.py
+│   │     ├── hdbscan_hotspots.py
+│   │     ├── kde_heatmap.py
+│   │     ├── mongo_test.py
+│   │     ├── check_mongo_fields.py
+│   │     └── check_nodes_columns.py
 │   │
 │   └── data/
-│         accident.csv
-│         cleaned_accident.csv
-│         processed_accident.csv
-│         processed_accident_with_coords.csv
-│         nodes.csv
-│         graph_edges.csv
+│         ├── accident.csv
+│         ├── cleaned_accident.csv
+│         ├── processed_accident.csv
+│         ├── processed_accident_with_coords.csv
+│         ├── nodes.csv
+│         └── graph_edges.csv
 │
-├── frontend/   (No Changes – Only ONE new file added)
+├── frontend/
 │   │
-│   ├── node_modules/
 │   ├── public/
+│   ├── node_modules/
 │   │
 │   ├── src/
-│   │   │
-│   │   ├── assets/
 │   │   │
 │   │   ├── components/
 │   │   │   ├── AccidentTrend.jsx
@@ -211,28 +153,217 @@ project-major/
 │   │   │   ├── admindashboard.css
 │   │   │   └── theme.css
 │   │   │
-│   │   ├── api/                ← ONLY NEW FOLDER ADDED
-│   │   │   └── api.js          ← ONLY NEW FILE ADDED
+│   │   ├── api/
+│   │   │   └── api.js
 │   │   │
-│   │   ├── App.css
 │   │   ├── App.jsx
+│   │   ├── App.css
 │   │   ├── index.css
 │   │   └── main.jsx
 │   │
-│   ├── .gitignore
-│   ├── eslint.config.js
-│   ├── index.html
-│   ├── package-lock.json
 │   ├── package.json
-│   ├── README.md
-│   └── vite.config.js
+│   ├── package-lock.json
+│   ├── vite.config.js
+│   ├── index.html
+│   ├── eslint.config.js
+│   └── README.md
 │
 ├── package.json
 └── README.md
-________________________________________
-Contributing
-This project is developed primarily for academic and research purposes. Contributions may be made by forking the repository and submitting well-documented pull requests.
-________________________________________
-License
-This project is intended for academic and educational use. All rights reserved by the author(s).
 
+
+---
+
+🧠 System Architecture
+
+Frontend (React + Leaflet) ↓ FastAPI Backend (REST APIs) ↓ Machine Learning Layer • XGBoost Severity Predictor • GNN Model • Hybrid Predictor • HDBSCAN Hotspot Detection ↓ Processed Accident Dataset
+
+
+---
+
+⚙️ Installation Guide
+
+1️⃣ Clone Repository
+
+git clone <your-repository-url>
+cd project-major
+
+
+---
+
+2️⃣ Backend Setup
+
+cd api
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+Backend runs at:
+
+http://localhost:8000
+
+
+---
+
+3️⃣ Frontend Setup
+
+cd frontend
+npm install
+npm run dev
+
+Frontend runs at:
+
+http://localhost:5173
+
+
+---
+
+🔐 Authentication Flow
+
+1. User/Admin registers.
+
+
+2. Data is stored securely in database.
+
+
+3. On login, credentials are verified.
+
+
+4. JWT token is generated.
+
+
+5. Protected routes validate token.
+
+
+6. Role-based dashboard is loaded.
+
+
+
+
+---
+
+📊 Core Functional Modules
+
+1️⃣ Severity Prediction
+
+Uses trained XGBoost & GNN models
+
+Classifies accidents into Low, Medium, High
+
+Returns probability scores
+
+
+2️⃣ Hotspot Detection
+
+HDBSCAN clustering
+
+Detects dense accident regions
+
+Automatically ignores noise
+
+
+3️⃣ Route Risk Analysis
+
+Evaluates user-selected route
+
+Calculates severity-weighted risk score
+
+
+4️⃣ Voice Alert System
+
+Uses Web Speech API
+
+Alerts when entering high-risk zones
+
+
+
+---
+
+🚀 API Endpoints
+
+Endpoint	Method	Description
+
+/predict	POST	Predict accident severity
+/hotspots	GET	Get clustered hotspots
+/alerts	GET	Retrieve risk alerts
+/auth/login	POST	Login
+/auth/register	POST	Register
+/docs	GET	Swagger Documentation
+
+
+
+---
+
+📚 Technologies Used
+
+Backend
+
+FastAPI
+
+Uvicorn
+
+Pydantic
+
+Python
+
+
+Machine Learning
+
+XGBoost
+
+PyTorch
+
+HDBSCAN
+
+Scikit-learn
+
+Pandas
+
+NumPy
+
+
+Frontend
+
+React
+
+Vite
+
+Leaflet.js
+
+JavaScript (ES6+)
+
+CSS3
+
+
+
+---
+
+📈 Future Enhancements
+
+Real-time traffic data integration
+
+Mobile application version
+
+Cloud deployment (AWS/Azure)
+
+Advanced deep learning ensemble models
+
+Integration with smart city systems
+
+
+
+---
+
+🎓 Conclusion
+
+This project demonstrates a complete real-time accident prediction and hotspot detection framework combining supervised learning, unsupervised clustering, geospatial analysis, and full-stack web deployment.
+
+It provides a scalable and intelligent safety monitoring system that can assist in proactive accident prevention and smart transportation planning.
+
+
+---
+
+📄 License
+
+This project is developed for academic and educational purposes.
+
+All Rights Reserved © 2026
